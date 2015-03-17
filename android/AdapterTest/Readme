@@ -1,0 +1,28 @@
+It is a test for Adapter use in listView;
+there are 3 steps :
+1 implement a adapter
+2 implent a listView
+3 listView.setAdapter(adapter)
+
+solved problems:
+1. the widget such as ImageView ,TextView ,should have a id tag;
+ like 
+	android:id="@+id/id_name"
+	and call it use R.id.id_name in java files.
+	but I replace it with android:name="@+id/id_name",it puzzles me a lot of times. 
+
+some little bugs:
+1.the picture's size is not the same ,so is the font size and font position .
+
+Using some little tips:
+in res/values/strings.xml,use <string-array> tag:
+<string-array android:name="array_name">
+	<item>element_1</item>
+	<item>element_2</item>
+	<item>element_3</item>
+	<item>element_4</item>
+</string-array>
+
+in java files:
+	Resources res = getResources();
+	String[] arrays = res.getStringArray(R.array.array_name);
